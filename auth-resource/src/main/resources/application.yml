@@ -1,0 +1,21 @@
+# Make the application available at http://localhost:9000
+
+server:
+  port: 9000
+
+# Configure the public key to use for verifying the incoming JWT tokens
+security:
+  sessions: NEVER
+  oauth2:
+    resource:
+      jwt:
+        keyValue: |
+            -----BEGIN PUBLIC KEY-----
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAltAv0PHZZCFteAXcNKOw
+            C3eOKZdNNecuDDP/ItyEH776MKRNVQ/ukfEFfGOh3K+/JNHnsTt3Uj9nV6YkmG3b
+            yMznuhJi9TxdJDvCol8nv1+HaPiGm520NHDdC7ueE0gQxE2PBCjrjrTWvDzPbdOk
+            wbMeAnJJdl0BCnwM0vvKYL85wdzeJkDyqz03Qurrchc+VGZbfRzb+8TgzTn4sU87
+            LsejRFi+sCPyfEiKW8zBnXx/bWMzbvActfN5KWwAicn5yrYp1podZKJUhhPANU+C
+            VChI9s8dXtHZboiak54uxP2nOfG02AQqsxih+IALFaHjC0AwAUHJqdCRx7dq7xIn
+            OwIDAQAB
+            -----END PUBLIC KEY-----

@@ -1,0 +1,28 @@
+
+JWT Access Tokens (JSON Web Token )
+
+
+JWT Access Tokens provide a way to create and validate access tokens without requiring 
+a central storage such as a database. This decreases the latency of the OAuth2 service when
+validating Access Tokens.
+
+JWT Access Tokens use JSON Web Signatures  and Public Key Cryptography to 
+establish their validity. The OAuth2.0 Server signs the tokens using a private key, and other
+parties can verify the token using the Server’s public key.
+
+
+Generate JKS Java KeyStore File
+-----------------------------------
+
+keytool -genkeypair -alias mytest  -keyalg RSA -keypass mypass -keystore mytest.jks  -storepass mypass
+
+Export Public Key
+-------------------
+keytool -list -rfc --keystore mytest.jks | openssl x509 -inform pem -pubkey
+
+
+Note : download openssl and set the path for openssl.exe
+
+https://sourceforge.net/projects/openssl/
+
+

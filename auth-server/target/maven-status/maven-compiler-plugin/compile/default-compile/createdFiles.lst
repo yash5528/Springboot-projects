@@ -1,0 +1,4 @@
+demo\main\AuthServer.class
+demo\main\config\AuthServerConfigurer.class
+demo\main\config\WebSecurityConfigurer.class
+demo\main\config\WebMvcConfigurer.class
